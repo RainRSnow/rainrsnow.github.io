@@ -9,10 +9,10 @@
 
 
 **Domestic Conference**
-- 堀 泰心, 趙 辰宇, 筒井 弘, 大鐘 武雄, "スパイキングニューラルネットワークを用いた異常音検知における対数メルスペクトル算出のパラメータ最適化検討," 電気・情報関係学会北海道支部連合大会, p. 113, Nov. 2025. [[URL]](https://www.ieice.org/hokkaido/shibukai2025/program/program.html#68)
-- 山村 尚也, 趙 辰宇, 筒井 弘, 大鐘 武雄, "MFCCの固定小数点演算におけるビット幅がデルタ特徴量を用いたフレーズ音声認識精度に与える影響評価," 電気・情報関係学会北海道支部連合大会, p. 114, Nov. 2025. [[URL]](https://www.ieice.org/hokkaido/shibukai2025/program/program.html#69)
+- Taishin Hori, Chenyu Zhao, Hiroshi Tsutsui, Takeo Ohgane, "An Evaluation of Parameters for Log-Mel Spectrum Calculation in Anomalous Sound Detection Using Spiking Neural Networks," Joint Conference of Electrical, Electronics and Information Engineers in Hokkaido, p. 113, Nov. 2025 (in Japanese) [[URL]](https://www.ieice.org/hokkaido/shibukai2025/program/program.html#68)
+- Naoya Yamamura, Chenyu Zhao, Hiroshi Tsutsui, Takeo Ohgane, "Evaluation of Bit-Width Effects in Fixed-Point FPGA-Optimized MFCC Computation via Software Simulation for HMM-Based Phrase Speech Recognition Using Delta Features," Joint Conference of Electrical, Electronics and Information Engineers in Hokkaido, p. 114, Nov. 2025 (in Japanese). [[URL]](https://www.ieice.org/hokkaido/shibukai2025/program/program.html#69)
 - Chenyu Zhao, Yuzuki Morikawa, Hiroshi Tsutsui, Takeo Ohgane, "Design of a Streaming-Based Resource-Efficient Mel Filter Bank Architecture for Real-Time Mel Spectrum Extraction on FPGA," IEICE Society Conference, p. 118, A-14-15, Sep. 2025. [[URL]](https://pub.confit.atlas.jp/ja/event/society2025/presentation/A-14-15)
-- 森川 弓月, 趙 辰宇, 筒井 弘, 大鐘 武雄, "音声信号処理向け低コストメルフィルタバンクのハードウェア実装に関する一考察," Proceedings of the 50th PARTHENON Technical Society Conference, pp. 32-33, Dec. 2024. [[URL]](https://parthenon-society.com/2025/04/02/50program/)
+- Yuzuki Morikawa, Chenyu Zhao, Hiroshi Tsutsui, Takeo Ohgane, "Towards a Low-Cost Hardware Implementation of a Mel Filter Bank for Audio Signal Processing," Proceedings of the 50th PARTHENON Technical Society Conference, pp. 32-33, Dec. 2024 (in Japanese). [[URL]](https://parthenon-society.com/2025/04/02/50program/)
 - Chenyu Zhao, Hiroshi Tsutsui, Takeo Ohgane, "A Prototype Implementation of Audio Signal Pitch Shifting Utilizing Arty A7 and I2S MEMS Microphone Controlled by RISC-V Processor," Proceedings of the 49th PARTHENON Technical Society Conference, pp. 25-29, Dec. 2023. [[URL]](https://parthenon-society.com/2023/12/21/49program/)
 
 
