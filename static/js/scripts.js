@@ -1,6 +1,16 @@
+/*
+ * @Author: Chenyu Zhao
+ * @Date: 2026-01-15 22:42:47
+ * @LastEditors: Chenyu Zhao zhaochenyu@icn.ist.hokudai.ac.jp
+ * @LastEditTime: 2026-04-17 12:58:47
+ * @FilePath: /git_repo/yukipage/static/js/scripts.js
+ * @Description: 
+ * 
+ * Copyright (c) 2026 by Hokkaido Univ., IST, ICN Lab/Chenyu Zhao, All Rights Reserved.
+ */
 const content_dir = 'contents/'
 const config_file = 'config.yml'
-const section_names = ['home', 'awards', 'experience', 'publications'];
+const section_names = ['home', 'skills', 'awards', 'experience', 'publications'];
 
 
 window.addEventListener('DOMContentLoaded', event => {
