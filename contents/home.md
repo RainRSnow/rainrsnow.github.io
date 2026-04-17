@@ -1,6 +1,6 @@
 [![Chenyu.Z](https://img.shields.io/badge/Chenyu.Z-github-blue?logo=github)](https://github.com/RainRSnow)
 [![ICN lab](https://img.shields.io/badge/ICN-Hokkaido%20University-green?logo=google-scholar)](https://csw.ist.hokudai.ac.jp/?lang=en)
-[![Email](https://img.shields.io/badge/Contact-Email-red?logo=gmail)](zhaochenyu@icn.ist.hokudai.ac.jp)
+[![Email](https://img.shields.io/badge/Contact-Email-red?logo=gmail)](mailto:zhaochenyu@icn.ist.hokudai.ac.jp)
 
 I'm currently pursuing a Ph.D degree at the Graduate School of Information Science and Technology, Hokkaido University.
 
