@@ -1,0 +1,10 @@
+- C/C++, Python
+- Verilog HDL and FPGA module development
+- RTL design, verification, timing analysis
+- IC design flow: schematic, layout, simulation
+- MATLAB for signal and electrical simulation
+- Cadence, Synopsys EDA tools
+- RISC-V and ARM MCU development
+- RTOS-based embedded software development
+- PCB design and hardware prototyping
+- Chinese, English, Japanese
