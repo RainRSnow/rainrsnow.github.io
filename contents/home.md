@@ -2,11 +2,10 @@
 
 I'm currently pursuing a Ph.D degree at the Graduate School of Information Science and Technology, Hokkaido University.
 
+I have experience in digital IC design, FPGA development, and embedded systems. My undergraduate projects involved brain-computer interface and FPGA applications, giving me a solid foundation in hardware-software co-design. My graduate research focuses on a RISC-V-based SoC framework for audio signal processing for voice recognition and anomaly detection, with experience in RTL design, verification, timing analysis, hardware debugging, and system integration.
+
 #### Email  
 <code>zhaochenyu@icn.ist.hokudai.ac.jp</code>  
-
-#### Summary
-I have experience in digital IC design, FPGA development, and embedded systems. My undergraduate projects involved brain-computer interface and FPGA applications, giving me a solid foundation in hardware-software co-design. My graduate research focuses on a RISC-V-based SoC framework for audio signal processing for voice recognition and anomaly detection, with experience in RTL design, verification, timing analysis, hardware debugging, and system integration.
 
 #### Education  |  教育经历
 **Nanjing University of Posts and Telecommunications**, Bachelor of Electronic Engineering (2018 –2022)  
