@@ -14,17 +14,45 @@ const language_key = 'yukipage-language';
 
 window.addEventListener('DOMContentLoaded', () => {
     const mainNav = document.body.querySelector('#mainNav');
+    const navbarToggler = document.body.querySelector('.navbar-toggler');
+    const navbarCollapse = document.getElementById('navbarResponsive');
+
+    function updateNavigationOffset() {
+        const offset = Math.ceil(mainNav.getBoundingClientRect().height);
+        document.documentElement.style.setProperty('--navigation-offset', `${offset}px`);
+        return offset;
+    }
+
     const scrollSpy = new bootstrap.ScrollSpy(document.body, {
         target: mainNav,
-        offset: 100,
+        offset: updateNavigationOffset(),
     });
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
+    window.addEventListener('resize', () => {
+        if (!navbarCollapse.classList.contains('show')) updateNavigationOffset();
+    });
+    navbarCollapse.addEventListener('hidden.bs.collapse', updateNavigationOffset);
+
     document.querySelectorAll('#navbarResponsive .nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                bootstrap.Collapse.getOrCreateInstance(
-                    document.getElementById('navbarResponsive'), { toggle: false }
-                ).hide();
+        link.addEventListener('click', event => {
+            const hash = link.getAttribute('href');
+            const target = hash?.startsWith('#') ? document.getElementById(hash.slice(1)) : null;
+            if (!target) return;
+
+            event.preventDefault();
+            const scrollToTarget = () => {
+                requestAnimationFrame(() => {
+                    const targetTop = window.scrollY + target.getBoundingClientRect().top;
+                    window.scrollTo({ top: Math.max(0, targetTop - updateNavigationOffset()) });
+                    if (window.location.hash !== hash) window.history.pushState(null, '', hash);
+                });
+            };
+
+            if (window.getComputedStyle(navbarToggler).display !== 'none'
+                && navbarCollapse.classList.contains('show')) {
+                navbarCollapse.addEventListener('hidden.bs.collapse', scrollToTarget, { once: true });
+                bootstrap.Collapse.getOrCreateInstance(navbarCollapse, { toggle: false }).hide();
+            } else {
+                scrollToTarget();
             }
         });
     });
