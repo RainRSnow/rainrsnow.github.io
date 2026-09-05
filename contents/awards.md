@@ -1,2 +1,0 @@
-- EXEX Fellowship Full Year (2025 ~ 2027)
-- IEICE Young Researcher’s Award (2025)

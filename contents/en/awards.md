@@ -1,0 +1,7 @@
+- **2025–2027** — EXEX Fellowship (full year).
+- **2025** — IEICE Young Researcher’s Award.
+- **Dec 2020** — First Prize, 4th National University Student FPGA Innovation Design Final.
+- **Oct 2020** — Third Prize, Embedded System Special Invitational Competition (Intel Cup).
+- **Aug 2020** — Third Prize, China Undergraduate Computer Design Competition.
+- **Jun 2020** — First Prize, Jiangsu College Student Computer Design Competition.
+- **Oct 2019** — First Prize, 5th National University Bio-Internet Technology and Application “Three Innovations” Competition (3S Cup).

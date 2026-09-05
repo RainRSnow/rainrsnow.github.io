@@ -8,66 +8,117 @@
  * 
  * Copyright (c) 2026 by Hokkaido Univ., IST, ICN Lab/Chenyu Zhao, All Rights Reserved.
  */
-const content_dir = 'contents/'
-const config_file = 'config.yml'
-const section_names = ['home', 'skills', 'education', 'awards', 'experience', 'publications'];
+const content_dir = 'contents/';
+const section_names = ['home', 'education', 'experience', 'skills', 'awards', 'publications'];
+const language_key = 'yukipage-language';
 
-
-window.addEventListener('DOMContentLoaded', event => {
-
-    // Activate Bootstrap scrollspy on the main nav element
+window.addEventListener('DOMContentLoaded', () => {
     const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 74,
-        });
-    };
-
-    // Collapse responsive navbar when toggler is visible
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: mainNav,
+        offset: 100,
+    });
     const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
+    document.querySelectorAll('#navbarResponsive .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
+                bootstrap.Collapse.getOrCreateInstance(
+                    document.getElementById('navbarResponsive'), { toggle: false }
+                ).hide();
             }
         });
     });
 
+    marked.use({ mangle: false, headerIds: false });
+    const buttons = document.querySelectorAll('[data-language]');
+    const status = document.getElementById('content-status');
+    const cache = new Map();
+    let requestId = 0;
+    let activeLanguage;
+    let renderQueue = Promise.resolve();
 
-    // Yaml
-    fetch(content_dir + config_file)
-        .then(response => response.text())
-        .then(text => {
-            const yml = jsyaml.load(text);
-            Object.keys(yml).forEach(key => {
-                try {
-                    document.getElementById(key).innerHTML = yml[key];
-                } catch {
-                    console.log("Unknown id and value: " + key + "," + yml[key].toString())
+    function loadText(path) {
+        if (!cache.has(path)) {
+            cache.set(path, fetch(path).then(response => {
+                if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
+                return response.text();
+            }).catch(error => {
+                cache.delete(path);
+                throw error;
+            }));
+        }
+        return cache.get(path);
+    }
+
+    async function switchLanguage(language) {
+        const currentRequest = ++requestId;
+        status.hidden = false;
+        status.lang = language === 'zh' ? 'zh-CN' : 'en';
+        status.textContent = language === 'zh' ? '正在加载…' : 'Loading…';
+        document.getElementById('main-content').setAttribute('aria-busy', 'true');
+
+        try {
+            // Load the entire language before replacing content, so languages never mix.
+            const [configText, ...markdown] = await Promise.all([
+                loadText(`${content_dir}${language}/config.yml`),
+                ...section_names.map(name => loadText(name === 'publications'
+                    ? `${content_dir}publications.md`
+                    : `${content_dir}${language}/${name}.md`)),
+            ]);
+            const config = jsyaml.load(configText);
+            const html = markdown.map(content => marked.parse(content));
+            // Serialize DOM replacement with MathJax, including rapid language changes.
+            renderQueue = renderQueue.then(async () => {
+                if (currentRequest !== requestId) return;
+                const math = window.MathJax;
+                if (math?.startup?.promise) await math.startup.promise.catch(console.error);
+                if (currentRequest !== requestId) return;
+                const containers = section_names.map(name => document.getElementById(`${name}-md`));
+                if (math?.typesetClear) math.typesetClear(containers);
+                containers.forEach((container, index) => { container.innerHTML = html[index]; });
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    element.textContent = config[element.dataset.i18n];
+                });
+                document.getElementById('language-switch').setAttribute('aria-label', config['language-label']);
+                navbarToggler.setAttribute('aria-label', config['navigation-label']);
+                document.querySelector('#avatar img').alt = config['photo-label'];
+                document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+                buttons.forEach(button => {
+                    button.setAttribute('aria-pressed', String(button.dataset.language === language));
+                });
+                activeLanguage = language;
+                try { localStorage.setItem(language_key, language); } catch { /* Storage may be disabled. */ }
+                status.hidden = true;
+                document.getElementById('main-content').setAttribute('aria-busy', 'false');
+                scrollSpy.refresh();
+                if (math?.typesetPromise) {
+                    try { await math.typesetPromise(containers); } catch (error) { console.error(error); }
                 }
+                scrollSpy.refresh();
+            });
+            await renderQueue;
+        } catch (error) {
+            renderQueue = Promise.resolve();
+            if (currentRequest !== requestId) return;
+            console.error(error);
+            const messageLanguage = activeLanguage || language;
+            status.lang = messageLanguage === 'zh' ? 'zh-CN' : 'en';
+            status.textContent = messageLanguage === 'zh'
+                ? '内容加载失败，请重新选择语言以重试。'
+                : 'Content could not be loaded. Select a language to retry.';
+            status.hidden = false;
+            document.getElementById('main-content').setAttribute('aria-busy', 'false');
+        }
+    }
 
-            })
-        })
-        .catch(error => console.log(error));
-
-
-    // Marked
-    marked.use({ mangle: false, headerIds: false })
-    section_names.forEach((name, idx) => {
-        fetch(content_dir + name + '.md')
-            .then(response => response.text())
-            .then(markdown => {
-                const html = marked.parse(markdown);
-                document.getElementById(name + '-md').innerHTML = html;
-            }).then(() => {
-                // MathJax
-                MathJax.typeset();
-            })
-            .catch(error => console.log(error));
-    })
-
-}); 
+    buttons.forEach(button => {
+        button.addEventListener('click', () => switchLanguage(button.dataset.language));
+    });
+    let preferredLanguage;
+    try { preferredLanguage = localStorage.getItem(language_key); } catch { /* Use browser language. */ }
+    if (!['zh', 'en'].includes(preferredLanguage)) {
+        preferredLanguage = (navigator.languages?.[0] || navigator.language || 'en')
+            .toLowerCase().startsWith('zh') ? 'zh' : 'en';
+    }
+    switchLanguage(preferredLanguage);
+});
