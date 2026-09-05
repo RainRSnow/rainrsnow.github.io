@@ -1,7 +1,7 @@
 [![Chenyu.Z](https://img.shields.io/badge/Chenyu.Z-github-blue?logo=github)](https://github.com/RainRSnow)
-[![ICN 实验室](https://img.shields.io/badge/ICN-Hokkaido%20University-green?logo=google-scholar)](https://csw.ist.hokudai.ac.jp/?lang=en)
+[![ICN 实验室](https://img.shields.io/badge/ICN-Hokkaido%20University-green?logo=google-scholar)](https://csw.ist.hokudai.ac.jp/)
 [![电子邮件](https://img.shields.io/badge/Contact-Email-red?logo=gmail)](mailto:zhaochenyu@icn.ist.hokudai.ac.jp)
 
-我目前在北海道大学情报科学院攻读博士学位，研究聚焦于基于 RISC-V 的音频信号处理 SoC 框架，面向语音识别与异常检测等应用。
+我现为北海道大学情报科学院博士生，隶属于信息通信网络研究室（情報通信ネットワーク研究室）。研究聚焦于数字芯片与 SoC 的软硬件协同设计，围绕 RISC-V 处理器、信号处理和机器学习加速，贯通算法验证、体系结构设计、RTL 实现、FPGA 原型、ASIC 实现及板级集成。
 
-我具有数字集成电路设计、FPGA 开发和嵌入式系统开发经验，涉及 RTL 设计与验证、时序分析、硬件调试及系统集成。本科阶段参与的 FPGA 声源定位和脑机接口项目，为后续的软硬件协同设计研究奠定了基础。
+我的技术背景涵盖数字集成电路设计、FPGA 开发、嵌入式软件和 PCB 系统开发，能够面向不同应用需求开展从算法映射、硬件架构到芯片实现与系统验证的完整开发，兼顾性能、资源效率与工程可实现性。

@@ -10,7 +10,7 @@
 - Python / MATLAB for audio algorithm and machine learning model simulation, fixed-point conversion, and bit-width analysis.
 - Hardware-software co-implementation of signal processing algorithms and deployment and validation of machine learning inference on processors and hardware accelerators.
 - C/C++ development for ARM, RISC-V, STM32, and TM4 platforms and RTOS applications.
-- Linux applications and device drivers, UART / I2C / SPI interfaces, Altium Designer PCB design, and system bring-up.
+- Linux applications and device drivers, UART / I2C / SPI interfaces, PCB design using Cadence / KiCad, and system bring-up.
 
 #### Linux, Automation & Source Management
 - Linux development environments, Shell / Tcl scripting, and Makefile development for automated compilation, simulation, synthesis, and placement-and-routing flows.

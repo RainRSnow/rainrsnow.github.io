@@ -10,7 +10,7 @@
 - 使用 Python / MATLAB 开展音频算法与机器学习模型仿真、定点化和位宽分析。
 - 具备信号处理算法的软硬件协同实现，以及机器学习推理在处理器与硬件加速逻辑上的部署和验证经验。
 - 使用 C/C++ 开发 ARM、RISC-V、STM32 和 TM4 平台程序及 RTOS 应用。
-- 具备 Linux 应用与设备驱动、UART / I2C / SPI 接口、Altium Designer PCB 设计及系统联调经验。
+- 具备 Linux 应用与设备驱动、UART / I2C / SPI 接口、Cadence / KiCad PCB 设计及系统联调经验。
 
 #### Linux、自动化与源码管理
 - 熟悉 Linux 开发环境，能够编写 Shell / Tcl 脚本与 Makefile，自动执行编译、仿真、综合及布局布线流程。

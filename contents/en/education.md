@@ -3,7 +3,7 @@
 
 **Master's degree · Graduate School of Information Science and Technology · 2023–2025**
 
-- **Laboratory:** Information Communication Networks Laboratory (情報通信ネットワーク研究室)
+- **Laboratory:** Laboratory of Information Communication Networks
 - **Supervisors:** Prof. Takeo Ohgane and Assoc. Prof. Hiroshi Tsutsui
 - **Research progression:** During the master's program, studied fixed-point audio feature extraction and efficient FPGA implementation. The doctoral research extends this work to hardware-software co-design of RISC-V SoCs for audio signal processing and machine learning, spanning FPGA prototyping, ASIC implementation, and end-to-end system integration.
 

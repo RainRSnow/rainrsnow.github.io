@@ -24,4 +24,4 @@ Lead hardware-software co-design of an SoC combining audio signal processing and
 - Contributed to the project's patent as a named inventor.
 
 #### Patent contribution
-**A physiological condition monitoring device based on EEG signals and bioimpedance data** — invention patent, Jan 2020.
+**Physiological condition monitoring equipment based on electroencephalogram signals and bioimpedance data** — Chinese invention patent application, [CN111012339A](https://patents.google.com/patent/CN111012339A/en), filed Jan 7, 2020 and published Apr 17, 2020.
