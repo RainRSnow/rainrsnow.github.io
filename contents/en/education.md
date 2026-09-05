@@ -1,12 +1,14 @@
-### Hokkaido University
-**Ph.D. studies in Information Science and Technology · 2025–present**
+### Hokkaido University | Information Science and Technology
+**Ph.D. student · Graduate School of Information Science and Technology · 2025–present**
 
-**Master's degree in Information Science and Technology · 2023–2025**
+**Master's degree · Graduate School of Information Science and Technology · 2023–2025**
 
-### Nanjing University of Posts and Telecommunications
-**Bachelor's degree in Electronic Science and Technology · Sep 2018–Jun 2022**
+- **Laboratory:** Information Communication Networks Laboratory (情報通信ネットワーク研究室)
+- **Supervisors:** Prof. Takeo Ohgane and Assoc. Prof. Hiroshi Tsutsui
+- **Research progression:** During the master's program, studied fixed-point audio feature extraction and efficient FPGA implementation. The doctoral research extends this work to hardware-software co-design of RISC-V SoCs for audio signal processing and machine learning, spanning FPGA prototyping, ASIC implementation, and end-to-end system integration.
 
-Selected coursework: electromagnetic theory, semiconductor physics and devices, optical physics, optoelectronics, and integrated circuits and CAD.
+### Nanjing University of Posts and Telecommunications | Bachelor's Degree in Electronic Science and Technology
+**Electronic Science and Technology · Sep 2018–Jun 2022**
 
-#### Research interests
-FPGA, ASIC, signal processing, and system-on-chip (SoC) design.
+- **Academic foundation:** Built a hardware-software foundation through coursework in C/C++ and Python programming, analog and digital circuits, signals and systems, embedded systems, semiconductor physics and devices, and integrated circuit design and CAD.
+- **Engineering practice:** Built a foundation in digital hardware design and hardware-software co-development through projects involving FPGAs, embedded systems, and brain-computer interfaces.
