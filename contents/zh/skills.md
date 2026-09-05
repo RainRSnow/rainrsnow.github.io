@@ -1,14 +1,20 @@
 #### 数字硬件与集成电路设计
-- Verilog HDL、FPGA 模块开发、RTL 设计与验证、时序分析及硬件调试。
-- 集成电路设计流程：原理图设计、版图和仿真；使用 Cadence Virtuoso 及 Synopsys 工具。
-- 使用 Cadence、OrCAD 和 Altium Designer 进行 PCB 设计与硬件原型开发。
+- 使用 Verilog HDL 进行定点数据通路、控制逻辑及音频处理模块的 RTL 设计。
+- 开展功能仿真、模块与系统级验证、时序分析、FPGA 综合实现及板级调试。
+- 集成 ARM / RISC-V CPU、硬件加速模块与外设，设计总线地址映射及时钟架构。
 
-#### 编程与嵌入式系统
-- C/C++、Python，以及用于信号与电路仿真的 MATLAB。
-- RISC-V 和 ARM 平台，包括 STM32、TM4 微控制器；基于 RTOS 的嵌入式软件开发。
-- Linux 应用程序与设备驱动开发。
-- 硬件接口与无线通信：UART、I2C、SPI、Zigbee 和 LoRa。
+- 使用 Synopsys / Cadence 工具进行逻辑综合、静态时序分析及布局布线。
+- 完成 LVS / DRC 检查、GDSII 生成及流片相关流程。
 
-#### 语言与协作
-- 中文；英语（TOEFL 80+）；日语（JLPT N1）。
-- 团队组织、问题分析与技术沟通；曾担任科技社团负责人。
+#### 算法与嵌入式开发
+- 使用 Python / MATLAB 开展音频算法与机器学习模型仿真、定点化和位宽分析。
+- 具备信号处理算法的软硬件协同实现，以及机器学习推理在处理器与硬件加速逻辑上的部署和验证经验。
+- 使用 C/C++ 开发 ARM、RISC-V、STM32 和 TM4 平台程序及 RTOS 应用。
+- 具备 Linux 应用与设备驱动、UART / I2C / SPI 接口、Altium Designer PCB 设计及系统联调经验。
+
+#### Linux、自动化与源码管理
+- 熟悉 Linux 开发环境，能够编写 Shell / Tcl 脚本与 Makefile，自动执行编译、仿真、综合及布局布线流程。
+- 使用 Git 管理项目源码，进行版本控制、分支协作与变更追踪。
+
+#### 语言能力
+- 中文；英语（TOEFL 80+、TOEIC 860）；日语（JLPT N1）。
